@@ -3,7 +3,7 @@ import { galleryImages } from "./ImageSrc";
 
 const Gallery = () => {
     return (
-       <div className="container-fluid">
+       <div className="container-fluid mt-5">
             <h1 className="tc navy">Gallery</h1>
             <div className="row justify-center mt3">
                 {
