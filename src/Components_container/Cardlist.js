@@ -1,9 +1,15 @@
 import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { cardListData,recommendedPlaces } from "./cardlist-data";
 import 'tachyons'
  
 
 let Cardlists = () => {
+    AOS.init({
+        duration: 2000,
+        
+    })
     let styles = {
         fontFamily: "Garamond",}
         let backgroundImageStyle = {
@@ -15,7 +21,7 @@ let Cardlists = () => {
     return (<div className='container-fluid mt-5'>
         <h3 className="tc mt-5 ">Most Visited Places</h3>
 
-        <div style={styles} className="row ma3" >
+        <div style={styles} className="row ma3" data-aos="fade-left" >
 
             {
                 cardListData.map((data) =>
@@ -26,15 +32,15 @@ let Cardlists = () => {
             }
         </div>
         <hr className="bb bw1 b--black-10" />
-        <div>
+        <div >
         <h2 className="tc ma3 pa2" >Recommended</h2>
             {
                 recommendedPlaces.map((data)=>
                     <div className="row ma2 pa2 tc" key={data.id}>
-                        <div className= "col-sm-5 pointer grow">
+                        <div className= "col-sm-5 pointer grow" data-aos="fade-left">
                             <img src = {data.imageSrc} alt="olumorock" />
                         </div>
-                        <p className= "col-sm-6 ma2 pa2">{data.description}</p>
+                        <p className= "col-sm-6 ma2 pa2" data-aos="fade-right">{data.description}</p>
                     </div>
                 )
             }

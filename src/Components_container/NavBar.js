@@ -6,7 +6,7 @@ import { Nav, Navbar} from "react-bootstrap";
 
  const NavBar=() => {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bb b--light-silver">
+    <Navbar collapseOnSelect expand="lg" className="bb b--light-silver navbar-inverse">
       <Navbar.Brand href="/">
       <img  style={{width:"200px"}} src="https://res.cloudinary.com/undercover/image/upload/v1584886586/RecreationalApp/HomeLogo_cewu0h.png" alt="logo" />
       </Navbar.Brand>

@@ -1,17 +1,18 @@
 import React, { Fragment } from "react";
+import TeamCard from "../Components_container/TeamCard";
 
 const AboutUs = ({ pics }) => {
   return (
     <Fragment>
-      <div className="container xl:flex justify-around md:m-20 justify-between">
-        <div className="xl:mr-10 md:flex-shrink-0">
+      <div className="">
+        <div className="container-fluid mb-4 h-15 ">
           <img
-            className="md:w-full transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110"
+            className="img-responsive"
             src={pics}
-            alt="alpha beach"
+            alt="aboutBanner"
           />
         </div>
-        <div className="mt-4 md:mt-0 md:ml-6">
+        <div className="mt-5 py-3 container">
           <p className="mt-2 text-gray-600">
             Are you bored and need fun places to go? Did you have a stressful
             week and need a cool spot to relax and unwind? You've come to the
@@ -27,6 +28,7 @@ const AboutUs = ({ pics }) => {
             So go right ahead! Search through our collection of amazing places
             to find cool spots near you!
           </p>
+          <TeamCard/>
         </div>
       </div>
     </Fragment>
