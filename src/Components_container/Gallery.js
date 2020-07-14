@@ -1,48 +1,23 @@
 import React from "react";
+import { galleryImages } from "./ImageSrc";
 
-const Gallery =()=>{
-    return(
-        <div>
-           
-            <div className="container">
-                <h1  className="tc navy">Gallery</h1>
-                <div className="row mb3">
-                    <img className="col-6 grow pointer" src ='https://res.cloudinary.com/undercover/image/upload/v1585698916/RecreationalApp/cities%20views/Zuma_Restaurant_xfxrxj.svg' alt="view" />
-                    <p className="col-sm-5 offset-1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, quam modi quisquam eligendi non quia 
-                        quaerat iusto perferendis earum quasi corrupti ullam sequi perspiciatis totam optio commodi qui at et 
-                        quis ut! Accusamus obcaecati doloremque similique, placeat culpa tempore eum.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, quam modi quisquam eligendi non quia 
-                        quaerat iusto perferendis earum quasi corrupti ullam sequi perspiciatis totam optio commodi qui at et 
-                        quis ut! Accusamus obcaecati doloremque similique, placeat culpa tempore eum.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, quam modi quisquam eligendi non quia 
-                        quaerat iusto perferendis earum quasi corrupti ullam sequi perspiciatis totam optio commodi qui at et 
-                        quis ut! Accusamus obcaecati doloremque similique, placeat culpa tempore eum.
-                    </p>
+const Gallery = () => {
+    return (
+       <div className="container-fluid mt-5">
+            <h1 className="tc navy">Gallery</h1>
+            <div className="row justify-center mt3">
+                {
+                galleryImages.displayedImage.map(image =>
+                <div className="col-sm-3 ma3 ">
+                    <img className="grow pointer" src={image} alt="view" width="350px" />
                 </div>
-                <div className="row ">
-                    <img className= "col-4 grow bw-2 pointer" src ='https://res.cloudinary.com/undercover/image/upload/v1584918077/RecreationalApp/cities%20views/bj_frg52h.svg' alt="view" />
-                    <img className= "col-4 grow bw-2 pointer" src ='https://res.cloudinary.com/undercover/image/upload/v1584917638/RecreationalApp/cities%20views/Rectangle_8PP_yyapbr.svg' alt="view" />
-                    <img className="col-4 grow pointer" src ='https://res.cloudinary.com/undercover/image/upload/v1584917569/RecreationalApp/cities%20views/Rectangle_10Ib_1_ulwybz.svg' alt="view" />
+                )
+                }
 
-                </div>
-                <div className="row mt-3">
-                    <img className= "col-4 grow bw-2 pointer" src ='https://res.cloudinary.com/undercover/image/upload/v1584917531/RecreationalApp/cities%20views/Rectangle_12Omu_uh8thr.svg' alt="view" />
-                    <img className= "col-4 grow bw-2 pointer" src ='https://res.cloudinary.com/undercover/image/upload/v1584917525/RecreationalApp/cities%20views/abj_cmpubm.svg' alt="view" />
-                    <img className= "col-4 grow bw-2 pointer" alt="Omu resort" src="https://res.cloudinary.com/undercover/image/upload/v1585698959/RecreationalApp/cities%20views/Omu_resort_swsmhp.svg" />
-                </div>
-                    <div className="row mt-3">
-                    <img className="col-5 w-100-ns offset-1 grow bw-2 pointer" src ='https://res.cloudinary.com/undercover/image/upload/v1584917558/RecreationalApp/cities%20views/palms.lag_qhzlyp.svg' alt="view" />
-                    <p className="col-5 offset-1 mt4 ph2"> 
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, quam modi quisquam eligendi non quia 
-                        quaerat iusto perferendis earum quasi corrupti ullam sequi perspiciatis totam optio commodi qui at et 
-                        quis ut! Accusamus obcaecati doloremque similique, placeat culpa tempore eum.
-                    </p>
-                    </div>
-        </div>
+                
             </div>
-        
-    )
+        </div>
+     )
 }
 
 export default Gallery;

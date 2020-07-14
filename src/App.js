@@ -1,15 +1,18 @@
 import React, { Fragment,  lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import ControlledCarousel from './Components_container/Carousel';
+import Cardlists from './Components_container/Cardlist';
 import FindPage from './components/Findpage/FindPage';
-import SpecialOffer from './components/SpecialOffer/SpecialOffer';
-import GalleryPage from './components/Gallery Page/GalleryPage'
+import SpecialOffer from './Components_container/SpecialOffer';
+import Gallery from './Components_container/Gallery';
 import AboutPage from './About Page/AboutPage';
-import NavBar from '../src/Components_container/NavBar'
+import NavBar from './Components_container/NavBar'
 import Footer from './Components_container/FooterComponents/Footer'
 
-const  Home = lazy(()=> import('./Components_container/Home'));
+
 const  LoginPage = lazy(()=> import('./components/login/LoginPage'));
 const SignUpPage = lazy(()=> import('./components/Register/SignUpPage'));
+
 
 const App = () => {
     return ( 
@@ -18,15 +21,16 @@ const App = () => {
                 <NavBar />
             <Router>
                 <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path='/find' exact component={FindPage} />
-                <Route path='/special-offer' exact component={SpecialOffer} />
-                <Route path='/gallery' exact component={GalleryPage} />
-                <Route path='/about-us' exact component={AboutPage} />
-               
-                <Route path='/login' exact component={LoginPage}  />
-                <Route path='/register' exact component={SignUpPage} />
-               
+                <div exact path="/">
+                  <ControlledCarousel />
+                  <Cardlists />
+                </div>
+                <Route path='/find' component={FindPage} />
+                <Route path='/special-offer' component={SpecialOffer} />
+                <Route path='/gallery'  component={Gallery} />
+                <Route path='/about-us'  component={AboutPage} />
+                <Route path='/login'  component={LoginPage}  />
+                <Route path='/register'  component={SignUpPage} />
                 </Switch>
             </Router>
                 <Footer />

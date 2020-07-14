@@ -3,34 +3,19 @@ import Newsletter from "./Newsletter"
 
 
 class Footer extends React.Component{
-    constructor (){
-        super();
-        this.state ={
-            input: '' 
-        }
-    this.onChangeInput = this.onChangeInput.bind(this);
-    this.onButtonFind = this.onButtonFind.bind(this);
-    }
-    onChangeInput = (event)=>{
-        this.setState ({input : event.target.value})
-    }
-    onButtonFind = (event)=>{
-        this.setState();
-        event.preventDefault();
-       
-    }
+  
 
  render(){
      return(
         <div className ="container-fluid white bg-navy">
-            <Newsletter onChangeInput={this.onChangeInput} onButtonFind={this.onButtonFind}/>
+            <Newsletter/>
             <div className="tc">
                 <h3>Download the App</h3>
                 <p>It's even better on the Phone</p>
-                <div className="md:flex justify-center sm:block ml-16 " >
-                <img src="https://res.cloudinary.com/undercover/image/upload/v1585046929/RecreationalApp/cities%20views/App-StoreAndroid_vzqitt.svg" alt="Apple logo" />
-                <img  src="https://res.cloudinary.com/undercover/image/upload/v1585046929/RecreationalApp/cities%20views/App-StoreAndroid_vzqitt.svg" alt="Apple logo" />
-                </div>
+              
+                <img className="ml4" src="https://res.cloudinary.com/undercover/image/upload/v1585046929/RecreationalApp/cities%20views/App-StoreAndroid_vzqitt.svg" alt="Apple logo" />
+                <img className="ml4" src="https://res.cloudinary.com/undercover/image/upload/v1585046929/RecreationalApp/cities%20views/App-StoreAndroid_vzqitt.svg" alt="Apple logo" />
+               
             </div>
             <div className="row mt5 tc">
                 <div className="col-sm-3">
